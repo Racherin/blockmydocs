@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import { DAppProvider } from "@usedapp/core";
 
 ReactDOM.render(
-  <React.StrictMode>
+    <BrowserRouter>
+     <DAppProvider config={{}}>
     <App />
-  </React.StrictMode>,
+    </DAppProvider>
+    </BrowserRouter>
+    ,
   document.getElementById('root')
 );
 
